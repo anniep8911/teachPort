@@ -13,6 +13,19 @@
             <h1>logo</h1>
             <h2>≡</h2>
         </header>
+        <section>
+            <div class="sideBar">
+                <ul>
+                    <li>html</li>
+                    <li>css</li>
+                    <li>scss</li>
+                    <li>JavaScript</li>
+                    <li>jQuery</li>
+                    <li>hive/sql</li>
+                    <li>excel</li>
+                </ul>
+            </div>
+        </section>
     </div>
     <div class="conView">
         <div class="contentGroup">
@@ -150,13 +163,27 @@
               btnNext = document.querySelector('.next'),
               bar = document.querySelector('.hdrWrap h2');
               logo = document.querySelector('.hdrWrap h1'),
-              cPrev = document.querySelector(".helper");
+              cPrev = document.querySelector(".helper"),
+              sideBar = document.querySelector('.hdrWrap section'),
+              sideLi = document.querySelectorAll('.hdrWrap section .sideBar li');
+        
+        let conWidth = parseInt(getComputedStyle(con).width)*-1,
+            conML = parseInt(getComputedStyle(conG).marginLeft),
+            num=0, cnt=0, ind=0;
     
         btn.forEach((eve)=>{
             eve.addEventListener('click',show);
             eve.addEventListener('mouseenter',ent);
             eve.addEventListener('mouseleave',leav);
         });
+
+        sideLi.forEach((e)=>{
+            e.addEventListener('mouseenter',function(){
+                sideBar.style.backgroundImage='url(image/'+this.innerHTML+'.jpg)';
+                this.style.color='#fff';
+            });
+        })
+
 
         function ent(){
             this.firstElementChild.innerHTML='🥇';
@@ -168,10 +195,6 @@
             cPrev.style.transform='scale(1)';
             
         }
-
-        let conWidth = parseInt(getComputedStyle(con).width)*-1,
-            conML = parseInt(getComputedStyle(conG).marginLeft),
-            num=0, num2= 7;
             
             console.log(conML);
             
@@ -228,6 +251,16 @@
         function remove(){
             lb.classList.remove('show');
         }
+        
+        bar.addEventListener('click',()=>{
+            if(cnt >= 1){
+                sideBar.classList.remove('show');
+                cnt =0;
+            }else{
+                sideBar.classList.add('show');
+                cnt++;
+            }
+        })
 
         window.addEventListener('mousemove',(e)=>{
             cPrev.style.left=e.pageX-20+"px";
@@ -242,7 +275,7 @@
             })
             logo.addEventListener('mousemove',()=>{
                 cPrev.style.transform='scale(3)';
-                logo.innerHTML='💒';
+                logo.innerHTML='🙆‍♀️';
             })
             logo.addEventListener('mouseleave',()=>{
                 cPrev.style.transform='scale(1)';
@@ -250,7 +283,7 @@
             })
             btnNext.addEventListener('mousemove',()=>{
                 cPrev.style.transform='scale(3)';
-                cPrev.style.fontSize='50px';
+                cPrev.style.fontSize='30px';
                 cPrev.innerHTML='🚀';
                 cPrev.style.backgroundColor='transparent';
                 
@@ -262,7 +295,7 @@
             })
             btnPrev.addEventListener('mousemove',()=>{
                 cPrev.style.transform='scale(3)';
-                cPrev.style.fontSize='50px';
+                cPrev.style.fontSize='30px';
                 cPrev.innerHTML='🚗';
                 cPrev.style.backgroundColor='transparent';
             })
@@ -271,7 +304,6 @@
                 cPrev.innerHTML='';
                 cPrev.style.backgroundColor='#fc0';
             })
-
         })
 
     </script>

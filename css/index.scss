@@ -11,7 +11,7 @@ div.hdrWrap{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 11;
     header{
         width: 90%;
         margin: 0 auto;
@@ -21,12 +21,43 @@ div.hdrWrap{
         h1{
             font-size: 40px;
             cursor: pointer;
+            position: relative;
+            z-index: 11;
         }
         h2{
             cursor: pointer;
+            position: relative;
             font-size: 50px;
             line-height: 50px;
             height: 50px;
+            z-index: 11;
+        }
+    }
+    section{
+        width:0%;
+        overflow: hidden;
+        height: 100vh;
+        background-color: #ccc;
+        position: absolute;
+        z-index: 8;
+        top: 0;right: 0;
+        transition: width 1s;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        ul{
+            list-style: none;
+            font-size: 40px;
+            line-height: 60px;
+            text-align: center;
+            margin-top: 150px;
+            text-transform: capitalize;
+            li{
+                cursor: pointer;
+            }
+        }
+        &.show{
+            width: 100%;
         }
     }
 }
@@ -116,7 +147,7 @@ div.conView{
             height: 80%;
             cursor: pointer;
             color: transparent;
-            z-index: 5;
+            z-index: 10;
            &.prev{
                 left: 0;
            }
@@ -132,6 +163,7 @@ div.conView{
             top: 0;
             left: 0;
             background-color: #fc0;
+            z-index: 9;
         }
     }
 }
