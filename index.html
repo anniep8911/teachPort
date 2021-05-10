@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="hdrWrap">
+        <header>
+            <h1>logo</h1>
+            <h2>≡</h2>
+        </header>
+    </div>
+    <div class="conView">
+        <div class="contentGroup">
+            <div class="content ct01">
+                <header>
+                    <h4>안녕하세요,</h4>
+                    <h2>강사 박정아입니다.</h2>
+                    <p>다음은 제가 강의할 수 있는 내용입니다.</p>
+                </header>
+                <section>
+                    <div class="introBox bt01">
+                        ⇒
+                    </div>
+                </section>
+            </div>
+            <div class="content ct02">
+                <header>
+                    <h4>웹 문서 기초</h4>
+                    <h2>HTML</h2>
+                    <p>HTML기초, 웹표준, 웹접근성, 구조, 시멘틱태그</p>
+                </header>
+                <section>
+                    <div class="btn bt02">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct03">
+                <header>
+                    <h4>스타일시트 기초</h4>
+                    <h2>CSS</h2>
+                    <p>CSS기초, 선택자 선택, float, flex, transition</p>
+                </header>
+                <section>
+                    <div class="btn bt03">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct04">
+                <header>
+                    <h4>스타일 심화</h4>
+                    <h2>SCSS</h2>
+                    <p>SCSS기초, 변수선언, 반복문, mixin, include, extention</p>
+                </header>
+                <section>
+                    <div class="btn bt04">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct05">
+                <header>
+                    <h4>스크립트 기초</h4>
+                    <h2>Java Script</h2>
+                    <p>javascript기초, 변수선언, DOM탐색, 반복문, 논리연산자, 아코디언, 슬라이드</p>
+                </header>
+                <section>
+                    <div class="btn bt05">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct06">
+                <header>
+                    <h4>스크립트 기초</h4>
+                    <h2>jQuery</h2>
+                    <p>javascript기초, 변수선언, DOM탐색, 아코디언, 슬라이드, jQuery mobile </p>
+                </header>
+                <section>
+                    <div class="btn bt06">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct07">
+                <header>
+                    <h4>webpack</h4>
+                    <h2>Bootstrap, html5up</h2>
+                    <p>웹팩사용을 통한 미니사이트 제작</p>
+                </header>
+                <section>
+                    <div class="btn bt07">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct08">
+                <header>
+                    <h4>데이터강의</h4>
+                    <h2>hive/SQL</h2>
+                    <p>hive/ sql강의 가능합니다.</p>
+                </header>
+                <section>
+                    <div class="btn bt08">
+                        <div class="move">+</div>
+                    </div>
+                </section>
+            </div>
+            <div class="content ct09">
+                <header>
+                    <h4>Contact Me</h4>
+                    <h2>처음으로 돌아가기</h2>
+                    <p>처음으로 돌아가시려면 아래 버튼을 클릭해주세요.</p>
+                </header>
+                <section>
+                    <div class="outroBox bt09">
+                        ⇐
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="btns">
+            <div class="button prev">prev button</div>
+            <div class="button next">next button</div>
+            <div class="helper"></div>
+        </div>
+    </div>
+
+
+    <div class="lightBox">
+        <div class="btn">
+            <div class="close">X</div>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelectorAll('.conView .btn');
+        const lb = document.querySelector('.lightBox');
+        const lbClose = document.querySelector('.lightBox .close');
+        const con = document.querySelector('.contentGroup .content');
+        const conG = document.querySelector('.contentGroup');
+        const intro = document.querySelector('.introBox'),
+              btnPrev = document.querySelector('.prev'),
+              btnNext = document.querySelector('.next'),
+              bar = document.querySelector('.hdrWrap h2');
+              logo = document.querySelector('.hdrWrap h1'),
+              cPrev = document.querySelector(".helper");
+    
+        btn.forEach((eve)=>{
+            eve.addEventListener('click',show);
+            eve.addEventListener('mouseenter',ent);
+            eve.addEventListener('mouseleave',leav);
+        });
+
+        function ent(){
+            this.firstElementChild.innerHTML='🥇';
+            this.style.fontSize='70px';
+            cPrev.style.transform='scale(3)';
+        }
+        function leav(){
+            this.firstElementChild.innerHTML='+';
+            cPrev.style.transform='scale(1)';
+            
+        }
+
+        let conWidth = parseInt(getComputedStyle(con).width)*-1,
+            conML = parseInt(getComputedStyle(conG).marginLeft),
+            num=0, num2= 7;
+            
+            console.log(conML);
+            
+            intro.addEventListener('click',function(){
+                conG.animate({marginLeft:[0, conWidth]},{duration:1000,fill:'forwards'});
+            })
+            
+            btnNext.addEventListener('click',function(){
+            if(num >= 6){
+                this.style.cursor='not-allowed';
+                conG.style.marginLeft='-200%';
+                console.log(num);
+            }else{
+                num++;
+                btnPrev.style.cursor='pointer';
+                btnNext.style.cursor='pointer';
+                conG.style.marginLeft=-34*num+'%';
+            }
+        })
+        
+        btnPrev.addEventListener('click',function(){
+            num--;
+            if(num <= 0){
+                this.style.cursor='not-allowed';
+                conG.style.marginLeft='0%';
+                num=0;
+            }else{
+                btnNext.style.cursor='pointer';
+                btnPrev.style.cursor='pointer';
+                conG.style.marginLeft=-34*num+'%';
+                console.log(num);
+            }
+            })
+
+
+        function show(){
+            this.firstElementChild.style.color='transparent';
+            this.animate({transform:['sacle(0)','scale(70)'],opacity:[1,0],color:'transpatent'},{duration:1000});
+            lb.classList.add('show');
+            lb.animate({opacity:[0,1]},{duration:500,fill:'forwards'});
+            var bgC = getComputedStyle(this).backgroundColor;
+            lb.style.backgroundColor=bgC;
+              
+        }
+
+        lbClose.addEventListener('click',function(){
+            lb.animate({opacity:[1,0]},{duration:1000,fill:'forwards'});
+            setTimeout(remove,1000);
+            btn.forEach((eve)=>{
+                eve.firstElementChild.style.color='#fff';
+            });
+        })
+
+        function remove(){
+            lb.classList.remove('show');
+        }
+
+        window.addEventListener('mousemove',(e)=>{
+            cPrev.style.left=e.pageX-20+"px";
+            cPrev.style.top=e.pageY-20+"px";
+            bar.addEventListener('mousemove',()=>{
+                cPrev.style.transform='scale(3)';
+                bar.innerHTML='🍔';
+            })
+            bar.addEventListener('mouseleave',()=>{
+                cPrev.style.transform='scale(1)'; 
+                bar.innerHTML='≡';
+            })
+            logo.addEventListener('mousemove',()=>{
+                cPrev.style.transform='scale(3)';
+                logo.innerHTML='💒';
+            })
+            logo.addEventListener('mouseleave',()=>{
+                cPrev.style.transform='scale(1)';
+                logo.innerHTML='JeongPark';
+            })
+            btnNext.addEventListener('mousemove',()=>{
+                cPrev.style.transform='scale(3)';
+                cPrev.style.fontSize='50px';
+                cPrev.innerHTML='🚀';
+                cPrev.style.backgroundColor='transparent';
+                
+            })
+            btnNext.addEventListener('mouseleave',()=>{
+                cPrev.style.transform='scale(1)';
+                cPrev.innerHTML='';
+                cPrev.style.backgroundColor='#fc0';
+            })
+            btnPrev.addEventListener('mousemove',()=>{
+                cPrev.style.transform='scale(3)';
+                cPrev.style.fontSize='50px';
+                cPrev.innerHTML='🚗';
+                cPrev.style.backgroundColor='transparent';
+            })
+            btnPrev.addEventListener('mouseleave',()=>{
+                cPrev.style.transform='scale(1)';
+                cPrev.innerHTML='';
+                cPrev.style.backgroundColor='#fc0';
+            })
+
+        })
+
+    </script>
+</body>
+</html>

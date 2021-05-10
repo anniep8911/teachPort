@@ -1,0 +1,167 @@
+$img:(ct01:#e46d6d, ct02:rgb(255, 195, 116), ct03:rgb(123, 176, 255), ct04:rgb(243, 191, 253),ct05:rgb(113, 113, 255),ct06:rgb(107, 76, 107),ct07:rgb(159, 207, 159),ct08:rgb(194, 167, 164),ct09:skyblue);
+$btn:(bt01:#8d4646, bt02:rgb(199, 127, 33), bt03:rgb(73, 101, 143), bt04:rgb(158, 122, 165),bt05:rgb(77, 77, 150),bt06:rgb(85, 52, 85),bt07:rgb(66, 99, 66),bt08:rgb(99, 65, 61),bt09:rgb(40, 79, 95));
+
+body{
+    padding: 0;
+    margin: 0;
+    overflow:hidden;
+}
+div.hdrWrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    header{
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h1{
+            font-size: 40px;
+            cursor: pointer;
+        }
+        h2{
+            cursor: pointer;
+            font-size: 50px;
+            line-height: 50px;
+            height: 50px;
+        }
+    }
+}
+div.conView{
+    width: 99vw;
+    height: 100vh;
+    overflow: hidden;
+    .contentGroup{
+        width: 300vw;
+        display: flex;
+        transition: margin-left 1s;
+        .content{
+            width: calc(100% / 9);
+            height: 100vh;
+            font-size: 1.5rem;
+            padding-left: 40px;
+            position: relative;
+            @each $name,$bgc in $img{
+                &.#{$name}{
+                    background-color: $bgc;
+                }
+            }
+            header{
+                margin-top: 80%;
+            }
+            section{
+                position: relative;
+                width: 100%;
+                height: 150px;
+                .introBox , .outtroBox{
+                    position: absolute;
+                    bottom: 20%;
+                    margin: 0 auto;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    font-size: 40px;
+                    background-color: green;
+                    color: #fff;
+                    cursor: pointer;
+                    margin: 0 auto;
+                    transition: all 0.3s;
+                    text-align: center;
+                    left: 0;right: 0;
+                    z-index: 5;
+                }
+                .btn{
+                    position: absolute;
+                    bottom: 20%;
+                    margin: 0 auto;
+                    left: 0; right: 0;
+                    text-align: center;
+                    width: 50px;
+                    height: 50px;
+                    line-height: 40px;
+                    border-radius: 50%;
+                    background-color: rgb(129, 156, 129);
+                    cursor: pointer;
+                    @each $name, $bgc in $btn{
+                        &.#{$name}{
+                            background-color: $bgc;
+                        }
+                    }
+                    .move{
+                        font-size: 40px;
+                        color: #fff;
+                        z-index: 10;
+                        position: absolute;
+                        margin: 0 auto;
+                        top: 0;left: 0;right: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .btns{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .button{
+            top: 0;
+            position: fixed;
+            width: calc(100% / 3);
+            height: 80%;
+            cursor: pointer;
+            color: transparent;
+            z-index: 5;
+           &.prev{
+                left: 0;
+           }
+           &.next{
+                right: 0;
+           }
+        }
+        .helper{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #fc0;
+        }
+    }
+}
+div.lightBox{
+    width: 0;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 1s;
+    z-index: 12;
+    &.show{
+        width: 100%;
+        height: 200%;
+        background-color: green;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 100;
+        .btn{
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50%;
+            font-size: 40px;
+            text-align: center;
+            position: fixed;
+            right: 10%;
+            bottom: 10%;
+            line-height: 40px;
+            cursor: pointer;
+        }
+    }
+}

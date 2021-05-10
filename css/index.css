@@ -1,0 +1,214 @@
+body {
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+div.hdrWrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+div.hdrWrap header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.hdrWrap header h1 {
+  font-size: 40px;
+  cursor: pointer;
+}
+div.hdrWrap header h2 {
+  cursor: pointer;
+  font-size: 50px;
+  line-height: 50px;
+  height: 50px;
+}
+
+div.conView {
+  width: 99vw;
+  height: 100vh;
+  overflow: hidden;
+}
+div.conView .contentGroup {
+  width: 300vw;
+  display: flex;
+  transition: margin-left 1s;
+}
+div.conView .contentGroup .content {
+  width: calc(100% / 9);
+  height: 100vh;
+  font-size: 1.5rem;
+  padding-left: 40px;
+  position: relative;
+}
+div.conView .contentGroup .content.ct01 {
+  background-color: #e46d6d;
+}
+div.conView .contentGroup .content.ct02 {
+  background-color: #ffc374;
+}
+div.conView .contentGroup .content.ct03 {
+  background-color: #7bb0ff;
+}
+div.conView .contentGroup .content.ct04 {
+  background-color: #f3bffd;
+}
+div.conView .contentGroup .content.ct05 {
+  background-color: #7171ff;
+}
+div.conView .contentGroup .content.ct06 {
+  background-color: #6b4c6b;
+}
+div.conView .contentGroup .content.ct07 {
+  background-color: #9fcf9f;
+}
+div.conView .contentGroup .content.ct08 {
+  background-color: #c2a7a4;
+}
+div.conView .contentGroup .content.ct09 {
+  background-color: skyblue;
+}
+div.conView .contentGroup .content header {
+  margin-top: 80%;
+}
+div.conView .contentGroup .content section {
+  position: relative;
+  width: 100%;
+  height: 150px;
+}
+div.conView .contentGroup .content section .introBox, div.conView .contentGroup .content section .outtroBox {
+  position: absolute;
+  bottom: 20%;
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 50%;
+  font-size: 40px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.3s;
+  text-align: center;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+div.conView .contentGroup .content section .btn {
+  position: absolute;
+  bottom: 20%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  line-height: 40px;
+  border-radius: 50%;
+  background-color: #819c81;
+  cursor: pointer;
+}
+div.conView .contentGroup .content section .btn.bt01 {
+  background-color: #8d4646;
+}
+div.conView .contentGroup .content section .btn.bt02 {
+  background-color: #c77f21;
+}
+div.conView .contentGroup .content section .btn.bt03 {
+  background-color: #49658f;
+}
+div.conView .contentGroup .content section .btn.bt04 {
+  background-color: #9e7aa5;
+}
+div.conView .contentGroup .content section .btn.bt05 {
+  background-color: #4d4d96;
+}
+div.conView .contentGroup .content section .btn.bt06 {
+  background-color: #553455;
+}
+div.conView .contentGroup .content section .btn.bt07 {
+  background-color: #426342;
+}
+div.conView .contentGroup .content section .btn.bt08 {
+  background-color: #63413d;
+}
+div.conView .contentGroup .content section .btn.bt09 {
+  background-color: #284f5f;
+}
+div.conView .contentGroup .content section .btn .move {
+  font-size: 40px;
+  color: #fff;
+  z-index: 10;
+  position: absolute;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+div.conView .btns {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+div.conView .btns .button {
+  top: 0;
+  position: fixed;
+  width: calc(100% / 3);
+  height: 80%;
+  cursor: pointer;
+  color: transparent;
+  z-index: 5;
+}
+div.conView .btns .button.prev {
+  left: 0;
+}
+div.conView .btns .button.next {
+  right: 0;
+}
+div.conView .btns .helper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #fc0;
+}
+
+div.lightBox {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: opacity 1s;
+  z-index: 12;
+}
+div.lightBox.show {
+  width: 100%;
+  height: 200%;
+  background-color: green;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 100;
+}
+div.lightBox.show .btn {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50%;
+  font-size: 40px;
+  text-align: center;
+  position: fixed;
+  right: 10%;
+  bottom: 10%;
+  line-height: 40px;
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */
