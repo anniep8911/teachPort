@@ -11,28 +11,19 @@ div.hdrWrap {
   width: 100%;
   z-index: 11;
 }
-
 div.hdrWrap header {
   width: 90%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
-
 div.hdrWrap header h1 {
   font-size: 40px;
   cursor: pointer;
   position: relative;
   z-index: 11;
 }
-
 div.hdrWrap header h2 {
   cursor: pointer;
   position: relative;
@@ -41,7 +32,6 @@ div.hdrWrap header h2 {
   height: 50px;
   z-index: 11;
 }
-
 div.hdrWrap section {
   width: 0%;
   overflow: hidden;
@@ -51,13 +41,11 @@ div.hdrWrap section {
   z-index: 8;
   top: 0;
   right: 0;
-  -webkit-transition: width 1s;
   transition: width 1s;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 div.hdrWrap section ul {
   list-style: none;
   font-size: 40px;
@@ -66,30 +54,23 @@ div.hdrWrap section ul {
   margin-top: 150px;
   text-transform: capitalize;
 }
-
 div.hdrWrap section ul li {
   cursor: pointer;
 }
-
 div.hdrWrap section.show {
   width: 100%;
 }
 
 div.conView {
-  width: 99vw;
+  width: 100vw;
   height: 100vh;
   overflow: hidden;
 }
-
 div.conView .contentGroup {
   width: 300vw;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-transition: margin-left 1s;
   transition: margin-left 1s;
 }
-
 div.conView .contentGroup .content {
   width: calc(100% / 9);
   height: 100vh;
@@ -97,53 +78,41 @@ div.conView .contentGroup .content {
   padding-left: 40px;
   position: relative;
 }
-
 div.conView .contentGroup .content.ct01 {
   background-color: #e46d6d;
 }
-
 div.conView .contentGroup .content.ct02 {
   background-color: #ffc374;
 }
-
 div.conView .contentGroup .content.ct03 {
   background-color: #7bb0ff;
 }
-
 div.conView .contentGroup .content.ct04 {
   background-color: #f3bffd;
 }
-
 div.conView .contentGroup .content.ct05 {
   background-color: #7171ff;
 }
-
 div.conView .contentGroup .content.ct06 {
   background-color: #6b4c6b;
 }
-
 div.conView .contentGroup .content.ct07 {
   background-color: #9fcf9f;
 }
-
 div.conView .contentGroup .content.ct08 {
   background-color: #c2a7a4;
 }
-
 div.conView .contentGroup .content.ct09 {
   background-color: skyblue;
 }
-
 div.conView .contentGroup .content header {
   margin-top: 80%;
 }
-
 div.conView .contentGroup .content section {
   position: relative;
   width: 100%;
   height: 150px;
 }
-
 div.conView .contentGroup .content section .introBox, div.conView .contentGroup .content section .outtroBox {
   position: absolute;
   bottom: 20%;
@@ -157,14 +126,12 @@ div.conView .contentGroup .content section .introBox, div.conView .contentGroup 
   color: #fff;
   cursor: pointer;
   margin: 0 auto;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
   text-align: center;
   left: 0;
   right: 0;
   z-index: 5;
 }
-
 div.conView .contentGroup .content section .btn {
   position: absolute;
   bottom: 20%;
@@ -179,43 +146,33 @@ div.conView .contentGroup .content section .btn {
   background-color: #819c81;
   cursor: pointer;
 }
-
 div.conView .contentGroup .content section .btn.bt01 {
   background-color: #8d4646;
 }
-
 div.conView .contentGroup .content section .btn.bt02 {
   background-color: #c77f21;
 }
-
 div.conView .contentGroup .content section .btn.bt03 {
   background-color: #49658f;
 }
-
 div.conView .contentGroup .content section .btn.bt04 {
   background-color: #9e7aa5;
 }
-
 div.conView .contentGroup .content section .btn.bt05 {
   background-color: #4d4d96;
 }
-
 div.conView .contentGroup .content section .btn.bt06 {
   background-color: #553455;
 }
-
 div.conView .contentGroup .content section .btn.bt07 {
   background-color: #426342;
 }
-
 div.conView .contentGroup .content section .btn.bt08 {
   background-color: #63413d;
 }
-
 div.conView .contentGroup .content section .btn.bt09 {
   background-color: #284f5f;
 }
-
 div.conView .contentGroup .content section .btn .move {
   font-size: 40px;
   color: #fff;
@@ -226,18 +183,12 @@ div.conView .contentGroup .content section .btn .move {
   left: 0;
   right: 0;
 }
-
 div.conView .btns {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 div.conView .btns .button {
   top: 0;
   position: fixed;
@@ -247,15 +198,12 @@ div.conView .btns .button {
   color: transparent;
   z-index: 10;
 }
-
 div.conView .btns .button.prev {
   left: 0;
 }
-
 div.conView .btns .button.next {
   right: 0;
 }
-
 div.conView .btns .helper {
   width: 50px;
   height: 50px;
@@ -272,11 +220,9 @@ div.lightBox {
   height: 0;
   opacity: 0;
   overflow: hidden;
-  -webkit-transition: opacity 1s;
   transition: opacity 1s;
   z-index: 12;
 }
-
 div.lightBox.show {
   width: 100%;
   height: 200%;
@@ -286,7 +232,24 @@ div.lightBox.show {
   left: 0;
   opacity: 100;
 }
-
+div.lightBox.show table {
+  line-height: 40px;
+  margin: 0 auto;
+  margin-top: 120px;
+}
+div.lightBox.show table tr td {
+  border: 1px solid black;
+  text-align: center;
+}
+div.lightBox.show table tr td:first-of-type {
+  width: 10%;
+}
+div.lightBox.show table tr td:nth-last-of-type(2) {
+  width: 40%;
+}
+div.lightBox.show table tr td:last-of-type {
+  width: 50%;
+}
 div.lightBox.show .btn {
   width: 50px;
   height: 50px;
@@ -299,5 +262,4 @@ div.lightBox.show .btn {
   bottom: 10%;
   line-height: 40px;
   cursor: pointer;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

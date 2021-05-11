@@ -4,7 +4,7 @@ $btn:(bt01:#8d4646, bt02:rgb(199, 127, 33), bt03:rgb(73, 101, 143), bt04:rgb(158
 body{
     padding: 0;
     margin: 0;
-    overflow:hidden;
+    overflow: hidden;
 }
 div.hdrWrap{
     position: fixed;
@@ -62,7 +62,7 @@ div.hdrWrap{
     }
 }
 div.conView{
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
     .contentGroup{
@@ -182,6 +182,28 @@ div.lightBox{
         top: 0;
         left: 0;
         opacity: 100;
+        table{
+          line-height: 40px;
+          margin: 0 auto;
+          margin-top: 120px;
+          tr{
+              td{
+                  border: 1px solid black;
+                  text-align: center;
+                  &:first-of-type{
+                      width: 10%;
+                  }
+                  &:nth-last-of-type(2){
+                      width: 40%;
+                  }
+                  &:last-of-type{
+                      width: 50%;
+                  }
+
+                }
+            }
+        }
+
         .btn{
             width: 50px;
             height: 50px;

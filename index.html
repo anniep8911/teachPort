@@ -10,7 +10,7 @@
 <body>
     <div class="hdrWrap">
         <header>
-            <h1>logo</h1>
+            <h1>Jeong</h1>
             <h2>≡</h2>
         </header>
         <section>
@@ -21,8 +21,8 @@
                     <li>scss</li>
                     <li>JavaScript</li>
                     <li>jQuery</li>
-                    <li>hive/sql</li>
-                    <li>excel</li>
+                    <li>webpack</li>
+                    <li>데이터강의</li>
                 </ul>
             </div>
         </section>
@@ -35,11 +35,6 @@
                     <h2>강사 박정아입니다.</h2>
                     <p>다음은 제가 강의할 수 있는 내용입니다.</p>
                 </header>
-                <section>
-                    <div class="introBox bt01">
-                        ⇒
-                    </div>
-                </section>
             </div>
             <div class="content ct02">
                 <header>
@@ -48,7 +43,7 @@
                     <p>HTML기초, 웹표준, 웹접근성, 구조, 시멘틱태그</p>
                 </header>
                 <section>
-                    <div class="btn bt02">
+                    <div class="btn bt02" data-num="0">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -60,7 +55,7 @@
                     <p>CSS기초, 선택자 선택, float, flex, transition</p>
                 </header>
                 <section>
-                    <div class="btn bt03">
+                    <div class="btn bt03" data-num="1">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -72,7 +67,7 @@
                     <p>SCSS기초, 변수선언, 반복문, mixin, include, extention</p>
                 </header>
                 <section>
-                    <div class="btn bt04">
+                    <div class="btn bt04" data-num="2">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -84,7 +79,7 @@
                     <p>javascript기초, 변수선언, DOM탐색, 반복문, 논리연산자, 아코디언, 슬라이드</p>
                 </header>
                 <section>
-                    <div class="btn bt05">
+                    <div class="btn bt05" data-num="3">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -96,7 +91,7 @@
                     <p>javascript기초, 변수선언, DOM탐색, 아코디언, 슬라이드, jQuery mobile </p>
                 </header>
                 <section>
-                    <div class="btn bt06">
+                    <div class="btn bt06" data-num="4">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -108,7 +103,7 @@
                     <p>웹팩사용을 통한 미니사이트 제작</p>
                 </header>
                 <section>
-                    <div class="btn bt07">
+                    <div class="btn bt07" data-num="5">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -120,7 +115,7 @@
                     <p>hive/ sql강의 가능합니다.</p>
                 </header>
                 <section>
-                    <div class="btn bt08">
+                    <div class="btn bt08" data-num="6">
                         <div class="move">+</div>
                     </div>
                 </section>
@@ -128,14 +123,9 @@
             <div class="content ct09">
                 <header>
                     <h4>Contact Me</h4>
-                    <h2>처음으로 돌아가기</h2>
-                    <p>처음으로 돌아가시려면 아래 버튼을 클릭해주세요.</p>
+                    <h2>마지막페이지입니다.</h2>
+                    <p>처음으로 돌아가시려면 좌측 영역을 클릭해주세요!</p>
                 </header>
-                <section>
-                    <div class="outroBox bt09">
-                        ⇐
-                    </div>
-                </section>
             </div>
         </div>
         <div class="btns">
@@ -147,165 +137,45 @@
 
 
     <div class="lightBox">
+        <table>
+            <caption>
+                <strong>수업제목</strong>
+                <p>학습목표</p>
+            </caption>
+            <thead>
+                <tr>
+                    <td>시차</td>
+                    <td>제목</td>
+                    <td>상세내용</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>1차시 제목</td>
+                    <td>1차시 내용</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2차시 제목</td>
+                    <td>2차시 내용</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>3차시 제목</td>
+                    <td>3차시 내용</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">해당 페이지는 1~3차시에 대한 수업예시로, 그 후 차시에대한 내용은 미팅을 통해 공유가능합니다.</td>
+                </tr>
+            </tfoot>
+        </table>
         <div class="btn">
-            <div class="close">X</div>
+            <div class="close">✖</div>
         </div>
     </div>
-
-    <script>
-        const btn = document.querySelectorAll('.conView .btn');
-        const lb = document.querySelector('.lightBox');
-        const lbClose = document.querySelector('.lightBox .close');
-        const con = document.querySelector('.contentGroup .content');
-        const conG = document.querySelector('.contentGroup');
-        const intro = document.querySelector('.introBox'),
-              btnPrev = document.querySelector('.prev'),
-              btnNext = document.querySelector('.next'),
-              bar = document.querySelector('.hdrWrap h2');
-              logo = document.querySelector('.hdrWrap h1'),
-              cPrev = document.querySelector(".helper"),
-              sideBar = document.querySelector('.hdrWrap section'),
-              sideLi = document.querySelectorAll('.hdrWrap section .sideBar li');
-        
-        let conWidth = parseInt(getComputedStyle(con).width)*-1,
-            conML = parseInt(getComputedStyle(conG).marginLeft),
-            num=0, cnt=0, ind=0;
-    
-        btn.forEach((eve)=>{
-            eve.addEventListener('click',show);
-            eve.addEventListener('mouseenter',ent);
-            eve.addEventListener('mouseleave',leav);
-        });
-
-        sideLi.forEach((e)=>{
-            e.addEventListener('mouseenter',function(){
-                sideBar.style.backgroundImage='url(image/'+this.innerHTML+'.jpg)';
-                this.style.color='#fff';
-            });
-        })
-
-
-        function ent(){
-            this.firstElementChild.innerHTML='🥇';
-            this.style.fontSize='70px';
-            cPrev.style.transform='scale(3)';
-        }
-        function leav(){
-            this.firstElementChild.innerHTML='+';
-            cPrev.style.transform='scale(1)';
-            
-        }
-            
-            console.log(conML);
-            
-            intro.addEventListener('click',function(){
-                conG.animate({marginLeft:[0, conWidth]},{duration:1000,fill:'forwards'});
-            })
-            
-            btnNext.addEventListener('click',function(){
-            if(num >= 6){
-                this.style.cursor='not-allowed';
-                conG.style.marginLeft='-200%';
-                console.log(num);
-            }else{
-                num++;
-                btnPrev.style.cursor='pointer';
-                btnNext.style.cursor='pointer';
-                conG.style.marginLeft=-34*num+'%';
-            }
-        })
-        
-        btnPrev.addEventListener('click',function(){
-            num--;
-            if(num <= 0){
-                this.style.cursor='not-allowed';
-                conG.style.marginLeft='0%';
-                num=0;
-            }else{
-                btnNext.style.cursor='pointer';
-                btnPrev.style.cursor='pointer';
-                conG.style.marginLeft=-34*num+'%';
-                console.log(num);
-            }
-            })
-
-
-        function show(){
-            this.firstElementChild.style.color='transparent';
-            this.animate({transform:['sacle(0)','scale(70)'],opacity:[1,0],color:'transpatent'},{duration:1000});
-            lb.classList.add('show');
-            lb.animate({opacity:[0,1]},{duration:500,fill:'forwards'});
-            var bgC = getComputedStyle(this).backgroundColor;
-            lb.style.backgroundColor=bgC;
-              
-        }
-
-        lbClose.addEventListener('click',function(){
-            lb.animate({opacity:[1,0]},{duration:1000,fill:'forwards'});
-            setTimeout(remove,1000);
-            btn.forEach((eve)=>{
-                eve.firstElementChild.style.color='#fff';
-            });
-        })
-
-        function remove(){
-            lb.classList.remove('show');
-        }
-        
-        bar.addEventListener('click',()=>{
-            if(cnt >= 1){
-                sideBar.classList.remove('show');
-                cnt =0;
-            }else{
-                sideBar.classList.add('show');
-                cnt++;
-            }
-        })
-
-        window.addEventListener('mousemove',(e)=>{
-            cPrev.style.left=e.pageX-20+"px";
-            cPrev.style.top=e.pageY-20+"px";
-            bar.addEventListener('mousemove',()=>{
-                cPrev.style.transform='scale(3)';
-                bar.innerHTML='🍔';
-            })
-            bar.addEventListener('mouseleave',()=>{
-                cPrev.style.transform='scale(1)'; 
-                bar.innerHTML='≡';
-            })
-            logo.addEventListener('mousemove',()=>{
-                cPrev.style.transform='scale(3)';
-                logo.innerHTML='🙆‍♀️';
-            })
-            logo.addEventListener('mouseleave',()=>{
-                cPrev.style.transform='scale(1)';
-                logo.innerHTML='JeongPark';
-            })
-            btnNext.addEventListener('mousemove',()=>{
-                cPrev.style.transform='scale(3)';
-                cPrev.style.fontSize='30px';
-                cPrev.innerHTML='🚀';
-                cPrev.style.backgroundColor='transparent';
-                
-            })
-            btnNext.addEventListener('mouseleave',()=>{
-                cPrev.style.transform='scale(1)';
-                cPrev.innerHTML='';
-                cPrev.style.backgroundColor='#fc0';
-            })
-            btnPrev.addEventListener('mousemove',()=>{
-                cPrev.style.transform='scale(3)';
-                cPrev.style.fontSize='30px';
-                cPrev.innerHTML='🚗';
-                cPrev.style.backgroundColor='transparent';
-            })
-            btnPrev.addEventListener('mouseleave',()=>{
-                cPrev.style.transform='scale(1)';
-                cPrev.innerHTML='';
-                cPrev.style.backgroundColor='#fc0';
-            })
-        })
-
-    </script>
+    <script src="js/index.js"></script>
 </body>
 </html>
