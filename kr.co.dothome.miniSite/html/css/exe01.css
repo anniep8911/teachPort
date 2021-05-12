@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+div.hdrWrap header {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.hdrWrap header h1 {
+  font-size: 38px;
+}
+div.hdrWrap header ul {
+  display: flex;
+  list-style: none;
+}
+div.hdrWrap header ul li {
+  margin-left: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+div.mnWrap {
+  height: 880px;
+  background-color: #666;
+}
+div.mnWrap main {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  padding: 200px 0;
+}
+div.mnWrap main header {
+  width: 40%;
+  text-transform: capitalize;
+  padding: 120px 0;
+}
+div.mnWrap main section {
+  width: 50%;
+}
+div.mnWrap main section .artGroup {
+  width: 400%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+div.mnWrap main section .artGroup article {
+  width: calc(100% / 6 - 20px);
+}
+div.mnWrap main section .artGroup article .image {
+  width: 100%;
+  height: 400px;
+  background-color: pink;
+  border-radius: 20px;
+}
+div.mnWrap main section .artGroup article .image.i01 {
+  height: 460px;
+}
+
+div.cntWrap .content {
+  width: 90%;
+  max-width: 1080px;
+  margin: 80px auto 0;
+}
+div.cntWrap .content header h2 {
+  font-size: 36px;
+  text-transform: capitalize;
+}
+div.cntWrap .content.ct01 section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 680px;
+  row-gap: 40px;
+}
+div.cntWrap .content.ct01 section article {
+  width: calc(100% / 3 - 20px);
+  height: 320px;
+}
+div.cntWrap .content.ct01 section article:first-of-type {
+  width: calc((100% / 3 * 2) - 10px);
+}
+div.cntWrap .content.ct01 section article .image {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background-color: #ccc;
+}
+div.cntWrap .content.ct02 section {
+  margin-top: 40px;
+  direction: rtl;
+  display: flex;
+  justify-content: space-between;
+}
+div.cntWrap .content.ct02 section header {
+  width: 40%;
+  text-align: left;
+  padding: 120px 0;
+  direction: ltr;
+}
+div.cntWrap .content.ct02 section .artGroup {
+  width: 50%;
+}
+div.cntWrap .content.ct02 section .artGroup article {
+  width: calc((100vw - 1080px) / 2 + 100%);
+}
+div.cntWrap .content.ct02 section .artGroup article .image {
+  height: 480px;
+  background-color: brown;
+  border-radius: 0 300px 300px 0;
+}
+div.cntWrap .content.ct03 header {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  text-align: center;
+}
+div.cntWrap .content.ct03 section {
+  width: 100%;
+}
+div.cntWrap .content.ct03 section .artGroup {
+  display: flex;
+  justify-content: space-around;
+  width: 250%;
+  margin-left: calc((100vw - 1080px) / -2 );
+}
+div.cntWrap .content.ct03 section .artGroup article {
+  width: calc(100% / 10 - 20px);
+  height: 280px;
+}
+div.cntWrap .content.ct03 section .artGroup article .image {
+  width: 100%;
+  height: 100%;
+  background-color: #ccc;
+  border-radius: 20px;
+}
+div.cntWrap .content.ct03 section .artGroup article:nth-of-type(3) .image {
+  background-color: purple;
+}
+div.cntWrap .content.ct03 section .artGroup article:nth-of-type(4) .image {
+  background-color: purple;
+}
+div.cntWrap .content.ct03 section .artGroup article:nth-of-type(5) .image {
+  background-color: purple;
+}
+
+div.ftrWrap {
+  background-color: skyblue;
+  margin-top: 120px;
+}
+div.ftrWrap footer {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1080px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+div.ftrWrap footer ul {
+  list-style: none;
+}
+div.ftrWrap footer .sns {
+  display: flex;
+  justify-content: space-between;
+}
+div.ftrWrap footer .sns div {
+  margin-left: 20px;
+}/*# sourceMappingURL=exe01.css.map */
